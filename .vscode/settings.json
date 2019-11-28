@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "tss2_tcti_tbs.h": "c",
+        "common.h": "c"
+    }
+}

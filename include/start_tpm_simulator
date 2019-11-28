@@ -1,0 +1,29 @@
+#!/bin/bash
+
+echo Configuring...
+
+echo Configuring tpm2_tss
+sudo useradd --system --user-group tss
+sudo udevadm control --reload-rules && sudo udevadm trigger
+sudo ldconfig
+
+echo Configuring tpm2_tabrmd
+sudo ldconfig
+sudo pkill -HUP dbus-daemon
+sudo systemctl daemon-reload
+sudo systemctl stop tpm2-abrmd.service
+sudo -u tss /usr/local/sbin/tpm2-abrmd --tcti=mssim
+tpm2-abrmd --allow-root --tcti=mssim
+
+dbus-send --system --dest=org.freedesktop.DBus --type=method_call \
+--print-reply /org/freedesktop/DBus org.freedesktop.DBus.ListNames
+
+cd /home/haing/TPM/ibmtpm/src
+
+echo Starting TPM simulator...
+./tpm_server&
+
+
+
+
+
