@@ -1,6 +1,6 @@
 /*Include section*************************************************************/
 //not sure if we need all
-#include "ttci_helper.h"
+#include "tcti_helper.h"
 
 /*Define section**************************************************************/
 #define TCTI_PROXY_MAGIC 0x5250584f0a000000ULL /* 'PROXY\0\0\0' */

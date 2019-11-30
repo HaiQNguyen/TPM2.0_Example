@@ -7,4 +7,4 @@ test: random_hash.c $(tcci_helper)
 
 .PHONY: clean
 clean:
-	rm test
+	rm random_hash
