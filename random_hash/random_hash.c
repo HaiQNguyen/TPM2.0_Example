@@ -9,7 +9,7 @@
 #include "../include/tss2_common.h"
 #include "../include/tss2_tpm2_types.h"
 
-#include "../ttci_helper/ttci_helper.h"
+#include "../tcti_helper/tcti_helper.h"
 
 #define TSSWG_INTEROP 1
 #define TSS_SAPI_FIRST_FAMILY 2

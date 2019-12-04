@@ -1,4 +1,4 @@
-tcci_helper=../ttci_helper/*c
+tcci_helper=../tcti_helper/*c
 lib_dir=/usr/local/lib
 
 test: random_hash.c $(tcci_helper)

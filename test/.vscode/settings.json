@@ -1,6 +1,0 @@
-{
-    "files.associations": {
-        "tss2_esys.h": "c",
-        "tss2_common.h": "c"
-    }
-}
